@@ -14,3 +14,16 @@ Jadi di Responsi ini saya menambahkan beberapa hal kedalam project responsi yang
 7. Kumpulkan dalam bentuk link GitHub.
 
    
+>>> Saya Membuat Class baru di dalam Package database yang bernama DatabaseKonek.java
+di dalamnya ada
+>>> public Connection getConnection() throws SQLException {
+        if (connection == null || connection.isClosed()) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                connection = DriverManager.getConnection(URL, DB_USER, DB_PASS);
+            } catch (ClassNotFoundException e) {
+                throw new SQLException("Driver tidak ditemukan.", e);
+            }
+        }
+        return connection;
+    }
