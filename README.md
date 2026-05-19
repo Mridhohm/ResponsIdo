@@ -72,6 +72,20 @@ Dan Juga
 
 Untuk Menghubungkan dan Menginisialisasi Database Mysql
 
+Skema Tabel Database
+
+```sql
+CREATE TABLE `cart_items` (
+    `id`         INT AUTO_INCREMENT PRIMARY KEY,
+    `name`       VARCHAR(255) NOT NULL UNIQUE,
+    `price`      DOUBLE NOT NULL,
+    `quantity`   INT NOT NULL DEFAULT 1,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+---
+
 Ada Pula Package Diskon yang ditambahkan dan berfungsi sebagai DiscountStrategy untuk mengimplemenmtasikan Diskon dan Event 12.12
 
 ~~~package eventdiskonan;
